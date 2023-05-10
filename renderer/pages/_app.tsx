@@ -1,13 +1,20 @@
 import React from "react";
 import type { AppProps } from "next/app";
 import "../styles/globals.css";
-import { TodoProvider } from "../context/TodoContext";
+import { MantineProvider } from "@mantine/core";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <TodoProvider>
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        /** Put your mantine theme override here */
+        colorScheme: "light",
+      }}
+    >
       <Component {...pageProps} />
-    </TodoProvider>
+    </MantineProvider>
   );
 }
 

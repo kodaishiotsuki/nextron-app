@@ -1,6 +1,7 @@
 import CloseButton from "../components/CloseButton";
 import OpenButton from "../components/OpenButton";
 import WebView from "../components/WebView";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
             url="https://github.com/kodaishiotsuki/next-supabase-socialmedia"
           />
           <CloseButton />
+          <Link href="next">Link</Link>
         </div>
       </div>
       <WebView />
